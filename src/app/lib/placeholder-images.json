@@ -1,0 +1,185 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "kaziranga",
+      "description": "Rhino in Kaziranga National Park",
+      "imageUrl": "https://images.unsplash.com/photo-1655288212806-c49afd9cceff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxrYXppcmFuZ2ElMjByaGlub3xlbnwwfHx8fDE3NzIyNTAzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kaziranga rhino"
+    },
+    {
+      "id": "kamakhya",
+      "description": "Kamakhya Temple, Guwahati",
+      "imageUrl": "https://images.unsplash.com/photo-1594803205835-d121cb46e518?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxrYW1ha2h5YSUyMHRlbXBsZXxlbnwwfHx8fDE3NzIyNTAzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kamakhya temple"
+    },
+    {
+      "id": "majuli",
+      "description": "Majuli Island landscapes",
+      "imageUrl": "https://images.unsplash.com/photo-1759738101611-07ef8510f0cb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxtYWp1bGklMjBpc2xhbmR8ZW58MHx8fHwxNzcyMjUwMzMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "majuli island"
+    },
+    {
+      "id": "manas",
+      "description": "Manas National Park wildlife",
+      "imageUrl": "https://picsum.photos/seed/manas/800/600",
+      "imageHint": "manas park"
+    },
+    {
+      "id": "sivasagar",
+      "description": "Rang Ghar, Sivasagar",
+      "imageUrl": "https://images.unsplash.com/photo-1654018590176-6f869b2cafff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzaXZhc2FnYXIlMjBtb251bWVudHN8ZW58MHx8fHwxNzcyMjUwMzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sivasagar monuments"
+    },
+    {
+      "id": "haflong",
+      "description": "Haflong hill station views",
+      "imageUrl": "https://picsum.photos/seed/haflong/800/600",
+      "imageHint": "haflong hills"
+    },
+    {
+      "id": "tezpur",
+      "description": "Agnigarh Hill, Tezpur",
+      "imageUrl": "https://picsum.photos/seed/tezpur/800/600",
+      "imageHint": "tezpur agnigarh"
+    },
+    {
+      "id": "sualkuchi",
+      "description": "Silk weaving in Sualkuchi",
+      "imageUrl": "https://images.unsplash.com/photo-1719462193202-7064a0b3fd04?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxzaWxrJTIwd2VhdmluZ3xlbnwwfHx8fDE3NzIyNTAzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "silk weaving"
+    },
+    {
+      "id": "pobitora",
+      "description": "Rhino in Pobitora Wildlife Sanctuary",
+      "imageUrl": "https://picsum.photos/seed/pobitora/800/600",
+      "imageHint": "pobitora rhino"
+    },
+    {
+      "id": "digboi",
+      "description": "Digboi Oil Refinery and War Cemetery",
+      "imageUrl": "https://picsum.photos/seed/digboi/800/600",
+      "imageHint": "digboi oil"
+    },
+    {
+      "id": "masor-tenga",
+      "description": "Assamese Fish Curry",
+      "imageUrl": "https://images.unsplash.com/photo-1758390286403-65c72a485066?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhc3NhbWVzZSUyMGZvb2R8ZW58MHx8fHwxNzcyMjUwMzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "assamese food"
+    },
+    {
+      "id": "pork-bamboo",
+      "description": "Pork with Bamboo Shoot",
+      "imageUrl": "https://images.unsplash.com/photo-1669031063371-59266bd4e2d3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxub3J0aGVhc3QlMjBwb3JrfGVufDB8fHx8MTc3MjI1MDMzNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "northeast pork"
+    },
+    {
+      "id": "pithas",
+      "description": "Assamese Rice Cakes",
+      "imageUrl": "https://picsum.photos/seed/pitha/400/400",
+      "imageHint": "assamese sweets"
+    },
+    {
+      "id": "assam-tea",
+      "description": "Assam Tea Plantations",
+      "imageUrl": "https://images.unsplash.com/photo-1658051161493-1d311c4c7b4d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHx0ZWElMjBnYXJkZW58ZW58MHx8fHwxNzcyMjUwMzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tea garden"
+    },
+    {
+      "id": "bihu",
+      "description": "Bihu dance celebration",
+      "imageUrl": "https://images.unsplash.com/photo-1741272689174-f7f03b09a0ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxiaWh1JTIwZGFuY2V8ZW58MHx8fHwxNzcyMjUwMzM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "bihu dance"
+    },
+    {
+      "id": "ambubachi",
+      "description": "Ambubachi Mela festivities",
+      "imageUrl": "https://images.unsplash.com/photo-1745647591090-6dcac361600d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxpbmRpYW4lMjBmZXN0aXZhbHxlbnwwfHx8fDE3NzIyNTAzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian festival"
+    },
+    {
+      "id": "panbari",
+      "description": "Panbari Mosque",
+      "imageUrl": "https://images.unsplash.com/photo-1672762693225-e91699c22531?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoaXN0b3JpYyUyMG1vc3F1ZXxlbnwwfHx8fDE3NzIyNjU2NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "historic mosque"
+    },
+    {
+      "id": "gurdwara-dhubri",
+      "description": "Gurdwara Sri Guru Tegh Bahadur Sahib",
+      "imageUrl": "https://images.unsplash.com/photo-1586261709963-7a93cad40d44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c2lraCUyMGd1cmR3YXJhfGVufDB8fHx8MTc3MjI2NTY1NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "sikh gurdwara"
+    },
+    {
+      "id": "khaspur",
+      "description": "Khaspur Dimasa Ruins",
+      "imageUrl": "https://images.unsplash.com/photo-1697193945970-ecae52a9601b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwcnVpbnN8ZW58MHx8fHwxNzcyMjQzMjMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "historical ruins"
+    },
+    {
+      "id": "bhuban-hills",
+      "description": "Bhuban Mahadev Temple",
+      "imageUrl": "https://images.unsplash.com/photo-1609770836167-7a74ed99bfad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxoaWxsJTIwdGVtcGxlfGVufDB8fHx8MTc3MjI2NTY1NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "hill temple"
+    },
+    {
+      "id": "chakrashila",
+      "description": "Chakrashila Wildlife Sanctuary",
+      "imageUrl": "https://images.unsplash.com/photo-1590345943055-96579f40fdfd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx3aWxkbGlmZSUyMHNhbmN0dWFyeXxlbnwwfHx8fDE3NzIyNjU2NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wildlife sanctuary"
+    },
+    {
+      "id": "bogamati",
+      "description": "Bogamati Picnic Spot",
+      "imageUrl": "https://images.unsplash.com/photo-1768528384668-77395a813a20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwaWNuaWMlMjBzcG90fGVufDB8fHx8MTc3MjI2NTY1NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "picnic spot"
+    },
+    {
+      "id": "hajo",
+      "description": "Hajo Pilgrimage Center",
+      "imageUrl": "https://images.unsplash.com/photo-1658736345485-47d06fb9279c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxzcGlyaXR1YWwlMjBwbGFjZXxlbnwwfHx8fDE3NzIyNjU2NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "spiritual place"
+    },
+    {
+      "id": "madan-kamdev",
+      "description": "Madan Kamdev Ruins",
+      "imageUrl": "https://images.unsplash.com/photo-1595814361237-f013b549a9af?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhbmNpZW50JTIwaGVyaXRhZ2V8ZW58MHx8fHwxNzcyMjY1NjU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ancient heritage"
+    },
+    {
+      "id": "deepor-beel",
+      "description": "Deepor Beel Bird Sanctuary",
+      "imageUrl": "https://images.unsplash.com/photo-1652711577100-4063d0fa0c73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3ZXRsYW5kJTIwbGFrZXxlbnwwfHx8fDE3NzIyNjU2NTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wetland lake"
+    },
+    {
+      "id": "orang",
+      "description": "Orang National Park",
+      "imageUrl": "https://images.unsplash.com/photo-1629808204499-a84a11f4ef7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHx3aWxkbGlmZSUyMHJoaW5vfGVufDB8fHx8MTc3MjI2NTY1NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wildlife rhino"
+    },
+    {
+      "id": "barpeta-satra",
+      "description": "Barpeta Satra",
+      "imageUrl": "https://picsum.photos/seed/barpeta/800/600",
+      "imageHint": "heritage satra"
+    },
+    {
+      "id": "chandubi",
+      "description": "Chandubi Lake",
+      "imageUrl": "https://picsum.photos/seed/chandubi/800/600",
+      "imageHint": "lake nature"
+    },
+    {
+      "id": "sutarkandi",
+      "description": "Sutarkandi Border",
+      "imageUrl": "https://picsum.photos/seed/border/800/600",
+      "imageHint": "border gate"
+    },
+    {
+      "id": "laokhowa",
+      "description": "Laokhowa Wildlife Sanctuary",
+      "imageUrl": "https://picsum.photos/seed/laokhowa/800/600",
+      "imageHint": "wildlife sanctuary"
+    }
+  ]
+}

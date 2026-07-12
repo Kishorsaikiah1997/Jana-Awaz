@@ -1,0 +1,10 @@
+{
+  "name": "Jan Awaaz",
+  "description": "A multilingual citizen feedback web app that allows citizens to submit development complaints and suggestions to their MP, supporting multiple Indian languages and offline submission.",
+  "requestFramePermissions": [
+    "microphone",
+    "geolocation",
+    "camera"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
