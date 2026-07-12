@@ -1,0 +1,27 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /submissions/{submissionId} {
+      allow read, write;
+    }
+    match /complaint_themes/{themeId} {
+      allow read, write;
+    }
+    match /priority_rankings/{rankingId} {
+      allow read, write;
+    }
+    match /mp_reports/{reportId} {
+      allow read, write;
+    }
+    match /mp_actions/{actionId} {
+      allow read, write;
+    }
+    match /sms_logs/{logId} {
+      allow read, write;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

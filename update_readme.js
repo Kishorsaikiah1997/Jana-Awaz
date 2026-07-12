@@ -1,8 +1,10 @@
-# Jana Awaz - Citizen Grievance Portal
+const fs = require('fs');
+let readme = fs.readFileSync('README.md', 'utf8');
 
-A full-stack citizen grievance portal and Member of Parliament (MP) dashboard, built to bridge the gap between citizens and their representatives.
+const featuresSectionStart = readme.indexOf('## Features');
+const techStackStart = readme.indexOf('## Tech Stack');
 
-## JAN AWAAZ — Complete Feature Documentation
+const newFeatures = `## JAN AWAAZ — Complete Feature Documentation
 
 ### CITIZEN PORTAL FEATURES
 
@@ -16,6 +18,7 @@ A full-stack citizen grievance portal and Member of Parliament (MP) dashboard, b
 **VOICE INPUT**
 - Browser-based voice recording using Web Speech API
 - Speaks in any Indian language transcribed directly to text
+- Language toggle: Hindi / English with visual feedback
 - Works on any Android browser without app installation
 - Transcribed text editable before submission
 
@@ -30,21 +33,31 @@ A full-stack citizen grievance portal and Member of Parliament (MP) dashboard, b
 - Optional photo with Yes/No toggle
 - Two options: Upload from gallery or capture directly with camera
 - GPS coordinates automatically captured with camera photo
-- GPS tags photo to exact location of the issue 
+- GPS tags photo to exact location of the issue — not citizen's home
 - Photo compressed client-side for low bandwidth networks
+- "Are you at this location?" toggle for remote submissions on behalf of others
 
-**AI ANALYSIS PIPELINE**
-- Text normalisation: fixes grammar and spelling while preserving citizen's voice
-- Silent content moderation: checks for inappropriate language
-- Smart tag generation: AI reads full context and generates descriptive tags capturing the need
-- Submission type classification: DEVELOPMENT NEED / SERVICE FAILURE / EMERGENCY 
-- Severity assessment: Critical / High / Medium / Low — based on human impact
-- Development sector identification: AI identifies the relevant sector
-- What is needed: AI summarizes the core need into a single sentence
+**AI ANALYSIS PIPELINE — CALL 1**
+Runs at submission time, citizen waits:
+- Text normalisation: fixes grammar and spelling while preserving citizen's voice completely
+- Silent content moderation: removes foul language and replaces with appropriate words — submission never blocked for language alone
+- Photo content moderation: detects nudity or inappropriate content before submission
+- Smart tag generation: AI reads full context and generates 3-8 descriptive tags capturing every dimension of the need — no predefined tag list constraining AI understanding
+- Submission type classification: DEVELOPMENT NEED / SERVICE FAILURE / EMERGENCY — based on genuine situational understanding
+- Severity assessment: Critical / High / Medium / Low — based on real human impact not keywords
+- Development sector identification: AI freely identifies the sector without predefined list
+- What is needed: one honest sentence capturing the core need
 
-**AI PHOTO INTELLIGENCE**
-- Deep photo intelligence: Identifies infrastructure, assesses damage, and detects safety concerns
-- Triggered automatically for Critical submissions, or on-demand via the dashboard
+**AI ANALYSIS PIPELINE — CALL 2**
+Runs after submission in background, citizen never waits:
+- Deep photo intelligence: What infrastructure is shown, Damage assessment, Safety concern detection, Evidence strength rating
+- AI-generated image detection: Identifies Midjourney/DALL-E images, EXIF metadata verification, Visual authenticity check, Protects MP from fake evidence
+- Text-photo consistency check: Cross-references citizen's words with photo content, Flags inconsistencies silently for MP awareness
+- Translation pipeline: English translation stored, Hindi translation stored, All future display from storage, Zero re-translation cost
+- Root cause analysis: Is this a one-off or systemic? How long has this been ongoing? What happens if unaddressed?
+- Government scheme matching: Identifies relevant central/state schemes for the development need e.g. Jal Jeevan Mission for water, PMGSY for roads, Samagra Shiksha for education
+- Population impact estimation: Based on location and nature of need, Cross-referenced with district data, Quantifies scale for MP planning
+- Development priority score: 1-10 score based on population affected, vulnerability, urgency and absence of existing infrastructure
 
 **LOCATION INTELLIGENCE**
 - Smart location detection: "Are you at this location?" Yes → GPS auto-capture, No → Manual entry for remote submissions
@@ -77,6 +90,8 @@ A full-stack citizen grievance portal and Member of Parliament (MP) dashboard, b
 - Shows development sector
 - Shows what AI understood
 - Shows MP action when taken in citizen-friendly language
+- Community voice indicator: "You are 1 of 23 people who raised this need in your area"
+- Development meter visual: Submitted → Reviewed → Linked → Sanctioned → In Progress → Complete
 
 **MY SUBMISSIONS (localStorage)**
 - Device-only history
@@ -94,6 +109,8 @@ A full-stack citizen grievance portal and Member of Parliament (MP) dashboard, b
 - Font size toggle: A / A+ / A++
 - High contrast dark mode
 - Large touch targets for elderly
+- Bilingual labels throughout: English + Hindi on all elements
+- Category icons for low literacy
 - Voice input for non-readers
 - Warm conversational language — never bureaucratic or cold
 - Works on basic Android phones
@@ -115,6 +132,7 @@ A full-stack citizen grievance portal and Member of Parliament (MP) dashboard, b
 **HOME / SCAN VIEW**
 Designed for 30-second morning review:
 - Personalised greeting with date
+- "Since you last visited: X hours ago"
 - New submissions count
 - Emergency count with status
 - Top AI priority for today
@@ -144,20 +162,69 @@ Designed for 30-second morning review:
 - Sort: newest / urgency / location
 
 **TAKE ACTION SYSTEM**
-On any submission MP can update status and action via dropdown:
-- Select Action (Forwarded to Department, Raised in Parliament, Called District Collector, Sanctioned for MPLAD fund, Field visit scheduled, etc.)
-- Specify custom action if needed
-- Update Status (Pending, Resolved, Closed)
-- AI auto-generates response text for the citizen based on the selected action
+On any submission MP can:
+
+🏛️ Forward to Department:
+- Assam department selector
+- Optional note
+- Citizen notified immediately
 - Action logged in audit trail
+
+📅 Schedule Field Visit:
+- Date picker
+- Team description
+- Citizen notified with date
+
+💰 Link to MPLAD Project:
+- Connect to existing project
+- Or create new project
+- Citizen sees project linked
+
+🏛️ Raise in Parliament:
+- Question type selection
+- Question number recorded
+- Historic record created
+- Citizen notified — unique feature, no other portal does this
+
+✓ Mark Resolved:
+- Resolution description
+- Optional evidence photo
+- Citizen notified
+- Public stats updated
+
+📝 Add Internal Note:
+- MP office only — not visible to citizen
+- Reminder and planning tool
+
+Every action:
+- Stored with timestamp
+- Attributed to MP office
+- Immutable audit trail
 - Updates citizen tracking
+- Updates public accountability stats
 
 **AI THEMATIC INTELLIGENCE**
 - Gemini reads ALL submissions simultaneously across all languages
 - Groups by genuine similarity — not keyword matching
 - Identifies themes humans would miss across language barriers
 - Each theme shows: Theme name (AI generated), Submission count, Districts affected, Estimated population affected, Evidence strength: Strong/Moderate/Weak, Representative citizen voice, Relevant government scheme, Department to contact
+- "Act on all N submissions" button: One action applies to entire theme, All N citizens notified at once, Bulk governance at scale
 - Refresh Intelligence button: Re-runs Gemini analysis, Picks up new submissions, Updates theme groupings
+
+**SCHEME OPPORTUNITIES**
+- AI matches submission patterns to relevant government schemes
+- Shows: scheme name, submission count, districts needing, department, application status
+- Central schemes: Jal Jeevan Mission, PMGSY, Samagra Shiksha, PMAY, Ayushman Bharat, MGNREGA
+- State schemes: Assam specific
+- No AI recommendation — just evidence and scheme data, MP decides
+
+**DEVELOPMENT PROJECTS MODULE**
+- MP office adds proposed projects
+- Each project shows: Name, location, cost, status, Citizen demand evidence count, Evidence strength badge, Relevant scheme if matched
+- Cross-references submissions automatically
+- Links citizen voices to planned development works
+- Statuses: Proposed / Funded / Ongoing / Completed
+- Objective evidence for MPLAD fund allocation decisions
 
 **CONSTITUENCY MAP**
 - Google Maps Platform API integration
@@ -181,6 +248,11 @@ On any submission MP can update status and action via dropdown:
 - Stored in Firestore with timestamp
 - Shows last generated report automatically
 
+**PUBLIC ACCOUNTABILITY PAGE**
+- Public URL — no login required: jan-awaaz.in/mp/darrang-udalguri
+- Shows publicly: Total citizen voices received, Actions taken by MP office, Average response time, Projects sanctioned, Parliament questions raised, Top development needs this month, Recent MP actions
+- Creates public accountability. MP motivated to act. Citizens can verify impact. Media can report on it. Judges can see governance loop.
+
 **MP LANGUAGE PREFERENCE**
 - Dropdown: English, Hindi, Assamese and all major Indian languages
 - Saves to localStorage
@@ -203,8 +275,8 @@ On any submission MP can update status and action via dropdown:
   - Language detection: ₹0 (Unicode)
   - Translation: Google Translate (Free Tier / No Cost Implementation)
   - Urgency scoring: ₹0 (keywords)
-  - AI Analysis Gemini: ~₹0.02
-  - AI Photo Vision: ~₹0.03
+  - Call 1 Gemini: ~₹0.02
+  - Call 2 Gemini: ~₹0.03
   - Total per submission: ~₹0.05
 - At 10,000 submissions/month:
   - AI cost: ~₹500/month
@@ -241,66 +313,8 @@ On any submission MP can update status and action via dropdown:
 - Police station field serves emergency coordination — not surveillance
 - Data belongs to constituency not to platform
 
+`;
 
-## Tech Stack
-
-- **Frontend**: React 19, Vite, Tailwind CSS, React Router, Recharts, @vis.gl/react-google-maps
-- **Backend**: Node.js, Express, Google Gen AI SDK
-- **Database**: Firebase Firestore
-- **Authentication**: Firebase Auth
-
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18+
-- Firebase Project
-- Google Gemini API Key
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd <repository-directory>
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Set up environment variables:
-   Copy `.env.example` to `.env` and fill in your API keys.
-   ```bash
-   cp .env.example .env
-   ```
-
-### Development
-
-Run the development server (starts both Vite frontend and Express backend):
-```bash
-npm run dev
-```
-
-### Production Build
-
-Build the full-stack application:
-```bash
-npm run build
-```
-
-Start the production server:
-```bash
-npm run start
-```
-
-## Environment Variables
-
-- `GEMINI_API_KEY`: Required for AI categorization and photo analysis.
-- `VITE_FIREBASE_*`: Your Firebase configuration keys.
-- `GOOGLE_MAPS_PLATFORM_KEY`: (Optional) for Maps integrations.
-
-## License
-
-This project is open-source and available under the MIT License.
+const updatedReadme = readme.substring(0, featuresSectionStart) + newFeatures + "\n" + readme.substring(techStackStart);
+fs.writeFileSync('README.md', updatedReadme);
+console.log('README updated successfully!');
